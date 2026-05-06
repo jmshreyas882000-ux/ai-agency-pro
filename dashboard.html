@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+</head>
+
+<body>
+<h1>Admin Dashboard</h1>
+
+<button onclick="getLeads()">Load Leads</button>
+
+<ul id="leadsList"></ul>
+
+<script>
+const token = localStorage.getItem("token");
+
+function getLeads() {
+  fetch("http://127.0.0.1:5000/leads", {
+    headers: {
+      "Authorization": token
+    }
+  })
+  .then(res => res.json())
+  .then(data => {
+    let list = document.getElementById("leadsList");
+    list.innerHTML = "";
+    data.forEach(l => {
+      list.innerHTML += `<li>${l}</li>`;
+    });
+  });
+}
+</script>
+</body>
+</html>
