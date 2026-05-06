@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #0a0a0a;
+  color: white;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle, #00ff88, #000);
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+button {
+  background: #00ff88;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* SERVICES */
+.services {
+  padding: 50px;
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background: #111;
+  padding: 20px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+/* CONTACT */
+.contact {
+  padding: 50px;
+  text-align: center;
+}
+
+input, textarea {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  width: 300px;
+}
